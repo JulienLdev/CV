@@ -1,0 +1,231 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.5;
+  padding: 15px;
+}
+
+/* =====================
+   CV CONTAINER (MAX WIDTH A4)
+===================== */
+.cv {
+  max-width: 794px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header p {
+  margin: 5px 0 10px;
+  font-weight: 400;
+}
+
+/* =====================
+   CONTACT (icônes et liens)
+===================== */
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.contact i {
+  margin-right: 6px;
+  color: rgba(255, 255, 255, 0.443);
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.contact a:hover {
+  opacity: 0.8;
+}
+
+/* =====================
+   INTRO
+===================== */
+.intro {
+  background: rgba(102, 126, 234, 0.08);
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* =====================
+   BLOCK TITLES
+===================== */
+.block {
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.block h2 {
+  color: #667eea;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.block h2 i {
+  margin-right: 6px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+/* =====================
+   COMPETENCES
+===================== */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.skills div {
+  background: rgba(102, 126, 234, 0.08);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.skills h4 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+.skills li {
+  list-style: none;
+  margin: 4px 0;
+  position: relative;
+  padding-left: 12px;
+  font-size: 0.9rem;
+}
+
+.skills li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+}
+
+/* =====================
+   EXPERIENCES
+===================== */
+.experience {
+  background: rgba(102, 126, 234, 0.05);
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+.exp-head {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.exp-head img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.exp-date {
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+.experience p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+.experience ul {
+  margin-left: 18px;
+  margin-top: 6px;
+}
+
+.experience li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+/* =====================
+   TAGS
+===================== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.tags span {
+  flex: 1;
+  max-width: calc(33% - 8px);
+  background: rgba(102, 126, 234, 0.15);
+  color: #667eea;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin: 2px 4px;
+  font-size: 0.8rem;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .tags span {
+    max-width: 100%;
+  }
+}
